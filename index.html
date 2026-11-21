@@ -7,7 +7,7 @@
 <meta name="description" content="ぽつりは、仲良し3〜6人だけで近況を届け合う、新しいSNS。フォロワーも、いいねも、知らない人もいない。写真・声・ひとことは24時間で消える。まもなくApp Storeで公開。">
 <meta property="og:title" content="ぽつり | 仲良しだけの、新しいSNS">
 <meta property="og:description" content="フォロワーも、いいねも、知らない人もいない。仲良し3〜6人だけの近況が、ホーム画面にそっと届く。Coming soon.">
-<meta property="og:image" content="https://yuchin0809.github.io/img/og.png">
+<meta property="og:image" content="https://yuchin0809.github.io/img/og-cs.png">
 <meta property="og:url" content="https://yuchin0809.github.io/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -230,6 +230,26 @@ a{color:inherit}
 .ring-row img{width:clamp(80px,12vw,120px);height:auto;animation:spin 16s linear infinite;filter:drop-shadow(0 14px 24px rgba(0,0,0,.35))}
 .ring-row img:nth-child(odd){animation-direction:reverse;animation-duration:22s}
 
+/* ---------- faq ---------- */
+.faq{padding:clamp(100px,14vw,170px) 0;background:var(--pearl)}
+.qs{margin-top:44px;display:grid;gap:12px}
+.q{background:#fff;border-radius:24px;overflow:hidden;transition:box-shadow .3s}
+.q[open]{box-shadow:0 20px 40px -24px rgba(26,34,144,.35)}
+.q summary{list-style:none;cursor:pointer;padding:22px 64px 22px 24px;font-weight:900;font-size:clamp(16px,2vw,19px);position:relative}
+.q summary::-webkit-details-marker{display:none}
+.q summary::before{content:"Q";font-family:var(--n);color:var(--blue);margin-right:12px}
+.q summary::after{content:"+";position:absolute;right:22px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:var(--pearl);display:grid;place-items:center;font-family:var(--n);font-size:20px;line-height:1;transition:transform .35s cubic-bezier(.3,1.4,.5,1),background-color .3s}
+.q[open] summary::after{transform:rotate(135deg);background-color:var(--lime)}
+.q .a{padding:0 24px 24px 50px;color:var(--sub);font-size:15px;line-height:1.95;animation:fadeUp .45s ease}
+/* ---------- social ---------- */
+.social{display:flex;justify-content:center;margin-top:18px}
+.xbtn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:999px;background:#000;color:#fff;text-decoration:none;font-weight:700;border:1.5px solid rgba(255,255,255,.25);transition:transform .25s,border-color .3s}
+.xbtn:hover{transform:translateY(-2px);border-color:var(--lime)}
+.xbtn svg{width:18px;height:18px}
+.navx{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);margin-right:10px;transition:background .3s}
+.navx:hover{background:rgba(255,255,255,.2)}
+.navx svg{width:16px;height:16px}
+.navr{display:flex;align-items:center}
 /* ---------- finale ---------- */
 .finale{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;
  background:radial-gradient(90% 70% at 50% 60%,#2B3DFF 0%,#1A2290 30%,#0B0A22 75%)}
@@ -276,7 +296,7 @@ a{color:inherit}
 
 <header class="nav" id="nav">
   <a class="brand" href="#top"><img src="img/mark.png" alt="">ぽつり</a>
-  <span class="pill">COMING SOON</span>
+  <div class="navr"><a class="navx x-link" href="https://x.com/RY_Create" target="_blank" rel="noopener" aria-label="ぽつりの最新情報(X)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L.1 1.2h7.6l5.2 6.9 6-6.9zm-1.3 19.4h2L6.5 3.3H4.3l13.3 17.3z"/></svg></a><span class="pill">COMING SOON</span></div>
 </header>
 
 <!-- HERO -->
@@ -454,6 +474,24 @@ a{color:inherit}
   <div class="ring-row rev" id="row2" aria-hidden="true"></div>
 </section>
 
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="kicker rv">FAQ</div>
+    <h2 class="big rv">よくある質問</h2>
+    <div class="qs">
+      <details class="q rv"><summary>いつ公開されますか？</summary><div class="a">いまAppleに出す準備をしています。公開日が決まったら、このサイトとXでお知らせします。</div></details>
+      <details class="q rv"><summary>無料で使えますか？</summary><div class="a">はい。置く・見る・返す・グループなど、基本の機能はすべて無料です。自分の輪の見た目を変える「輪のデザイン」(買い切り)と、運営を応援する「応援」だけが有料で、使える機能は変わりません。広告もありません。</div></details>
+      <details class="q rv"><summary>Androidでも使えますか？</summary><div class="a">いまはiPhone(iOS 17以降)だけです。AppleのiCloudにデータを保存するしくみのため、iCloudにサインインしたiPhoneが必要です。</div></details>
+      <details class="q rv"><summary>グループには何人まで入れますか？</summary><div class="a">1つのグループは6人までです。1人で10グループまで入れるので、いつメン・部活・家族など、分けて使えます。</div></details>
+      <details class="q rv"><summary>知らない人に見られることはありますか？</summary><div class="a">ありません。グループに入れるのは、招待リンクやQRコードを受け取った人だけです。フォローや検索で、知らない人とつながる機能はありません。</div></details>
+      <details class="q rv"><summary>置いたものは、どれくらい残りますか？</summary><div class="a">24時間で自動的に消えます。自分が置いたものは、24時間を待たずに自分で消したり、自分の写真を保存したりできます。</div></details>
+      <details class="q rv"><summary>何歳から使えますか？</summary><div class="a">13歳以上の方が使えます。18歳未満の方は、夜22時〜朝7時に通知が鳴らない設定を外せません。保護者のかた向けの説明も、アプリの中で読めます。</div></details>
+      <details class="q rv"><summary>いやな人がいたら、どうすればいいですか？</summary><div class="a">近況やメンバーの画面から、すぐに通報・ブロックできます。ブロックした人の近況はあなたに表示されなくなり、相手には知らされません。運営は通報を24時間以内を目標に確認します。</div></details>
+    </div>
+  </div>
+</section>
+
 <!-- FINALE -->
 <section class="finale">
   <canvas id="ripple" aria-hidden="true"></canvas>
@@ -468,6 +506,7 @@ a{color:inherit}
       </span>
       <button class="ghost" id="shareBottom" type="button">友達に教える</button>
     </div>
+    <div class="social rv"><a class="xbtn x-link" href="https://x.com/RY_Create" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L.1 1.2h7.6l5.2 6.9 6-6.9zm-1.3 19.4h2L6.5 3.3H4.3l13.3 17.3z"/></svg>Xで最新情報を見る</a></div>
   </div>
 </section>
 
@@ -589,6 +628,9 @@ a{color:inherit}
     try { await navigator.clipboard.writeText(data.url); toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1800); } catch (e) {}
   };
   $('#shareTop').addEventListener('click', share); $('#shareBottom').addEventListener('click', share);
+
+  // ---- faq: open one at a time ----
+  $$('.q').forEach(d => d.addEventListener('toggle', () => { if (d.open) $$('.q').forEach(o => { if (o !== d) o.open = false; }); }));
 
   // ---- cursor glow ----
   const glow = $('#glow');
