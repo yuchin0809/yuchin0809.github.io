@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "QAQ2VTWZCF.com.yuchin0809.potsuri",
+        "appIDs": ["QAQ2VTWZCF.com.yuchin0809.potsuri"],
+        "paths": ["/i/*", "/i"],
+        "components": [{ "/": "/i/*" }, { "/": "/i" }]
+      }
+    ]
+  }
+}
