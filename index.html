@@ -284,11 +284,6 @@ a{color:inherit}
   .widget-sec .grid > :first-child{order:2}
   #glow{display:none}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .rv,.hero h1 .ch,.hero p.lead,.cta{opacity:1!important;transform:none!important;filter:none!important}
-  .big .w{opacity:1}
-}
 </style>
 </head>
 <body>
@@ -520,7 +515,8 @@ a{color:inherit}
 
 <script>
 (() => {
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Windowsの「アニメーション効果」がオフだと reduce になり、全部止まってしまうため、ここでは使わない
+  const reduce = false;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
