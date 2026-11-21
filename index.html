@@ -263,6 +263,10 @@ a{color:inherit}
 .foot{background:var(--night);color:var(--darksub);padding:40px 0 calc(40px + env(safe-area-inset-bottom));font-size:13px}
 .foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .foot a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.foot .flinks{flex-basis:100%;display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:8px}
+.foot .flinks a{border:0;opacity:.85}.foot .flinks a:hover{opacity:1;text-decoration:underline}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:900;color:var(--blue);text-decoration:none;border-bottom:2px solid rgba(43,61,255,.3);padding-bottom:2px}
+.more:hover{border-color:var(--blue)}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,120px);background:var(--lime);color:var(--ink);font-weight:700;padding:12px 18px;border-radius:999px;z-index:99;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .toast.show{transform:translate(-50%,0)}
 
@@ -455,6 +459,7 @@ a{color:inherit}
       <div class="sc rv d1"><div class="ic">📍</div><h3>位置情報なし</h3><p>位置情報は使いません。写真の位置情報も、置く前に取り除きます。</p></div>
       <div class="sc rv d2"><div class="ic">☁️</div><h3>広告なし・iCloud保存</h3><p>広告もトラッキングもありません。データはAppleのiCloudに保存されます。</p></div>
     </div>
+    <a class="more rv" href="/safety/">安全への取り組みをくわしく →</a>
   </div>
 </section>
 
@@ -484,6 +489,7 @@ a{color:inherit}
       <details class="q rv"><summary>何歳から使えますか？</summary><div class="a">13歳以上の方が使えます。18歳未満の方は、夜22時〜朝7時に通知が鳴らない設定を外せません。保護者のかた向けの説明も、アプリの中で読めます。</div></details>
       <details class="q rv"><summary>いやな人がいたら、どうすればいいですか？</summary><div class="a">近況やメンバーの画面から、すぐに通報・ブロックできます。ブロックした人の近況はあなたに表示されなくなり、相手には知らされません。運営は通報を24時間以内を目標に確認します。</div></details>
     </div>
+    <a class="more rv" href="/faq/">すべての質問を見る →</a>
   </div>
 </section>
 
@@ -507,8 +513,9 @@ a{color:inherit}
 
 <footer class="foot">
   <div class="wrap">
+    <nav class="flinks" aria-label="サイト内のページ"><a href="/howto/">使い方</a><a href="/widget/">ウィジェット</a><a href="/safety/">安全への取り組み</a><a href="/parents/">保護者のかたへ</a><a href="/faq/">よくある質問</a><a href="/news/">お知らせ</a><a href="/potsuri-privacy/">プライバシーポリシー</a></nav>
     <div class="brand" style="font-size:16px"><img src="img/mark.png" alt="" style="width:28px;height:28px">ぽつり</div>
-    <div><a href="https://yuchin0809.github.io/potsuri-privacy/">プライバシーポリシー</a>　© 2026 ぽつり運営</div>
+    <div>© 2026 ぽつり運営</div>
   </div>
 </footer>
 <div class="toast" id="toast">リンクをコピーしました</div>
