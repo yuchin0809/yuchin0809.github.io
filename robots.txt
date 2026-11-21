@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /i/
 
 Sitemap: https://yuchin0809.github.io/sitemap.xml
